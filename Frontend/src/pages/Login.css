@@ -1,0 +1,91 @@
+/* Contenedor principal centrado */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  color: #124150;
+}
+
+/* Caja de login */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
+  text-align: center;
+}
+
+/* Título */
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #124150;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 4px rgba(0, 229, 255, 0.3);
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form label {
+  text-align: left;
+  font-weight: 500;
+  color: #124150;
+}
+
+.login-form input {
+  padding: 0.6rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #16a34a55;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #16a34a;
+}
+
+/* Botón */
+.login-button {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
+}
+
+/* Texto registro */
+.login-register {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #124150;
+}
+
+.login-register span {
+  color: #16a34a;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.login-register span:hover {
+  color: #22c55e;
+}
+

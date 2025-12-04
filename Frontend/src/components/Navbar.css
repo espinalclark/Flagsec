@@ -1,0 +1,211 @@
+/* Contenedor principal del navbar lateral */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  right: -260px;           /* fuera de la pantalla cerrado */
+  width: 240px;
+  height: 100vh;
+
+  /* Fondo futurista más transparente y borroso */
+  background: rgba(12, 14, 22, 0.15);
+  backdrop-filter: blur(15px);
+
+  /* Borde suave tipo glow */
+  border-left: 1px solid rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);
+
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;/* Contenedor principal del navbar lateral */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  right: -260px;           /* fuera de la pantalla cerrado */
+  width: 240px;
+  height: 100vh;
+
+  /* Fondo futurista más transparente y borroso */
+  background: rgba(12, 14, 22, 0.15);
+  backdrop-filter: blur(15px);
+
+  /* Borde suave tipo glow */
+  border-left: 1px solid rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);
+
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.35s ease-in-out;
+
+  z-index: 1001; /* encima del header */
+  pointer-events: none; /* bloquea interacción cuando está cerrado */
+}
+
+/* Cuando está abierto */
+.navbar-container.open {
+  right: 0;
+  pointer-events: auto; /* interacción activa */
+}
+
+/* Header dentro del navbar: logo + botón cerrar */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Logo completo: mari.png + FLAGSEC */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* mari.png con glow */
+.navbar-logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: drop-shadow(0 0 6px #00e5ff);
+}
+
+/* FLAGSEC brand */
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
+}
+
+/* Botón cerrar X */
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.85;
+
+  position: absolute;
+  top: 5px;      /* pegado al techo */
+  right: 5px;    /* pegado a la esquina derecha */
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* Lista de enlaces justo debajo del logo, semi pegado */
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #124150; /* color base oscuro */
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+  text-shadow: 0 0 6px #00e5ff; /* glow azul como el logo */
+}
+
+.navbar-links a:hover {
+  color: #00e5ff;  /* mantiene el efecto hover */
+  text-shadow: 0 0 8px #00e5ff; /* glow más intenso al pasar el mouse */
+}
+
+  transition: 0.35s ease-in-out;
+
+  z-index: 1001; /* encima del header */
+  pointer-events: none; /* bloquea interacción cuando está cerrado */
+}
+
+/* Cuando está abierto */
+.navbar-container.open {
+  right: 0;
+  pointer-events: auto; /* interacción activa */
+}
+
+/* Header dentro del navbar: logo + botón cerrar */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Logo completo: mari.png + FLAGSEC */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* mari.png con glow */
+.navbar-logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: drop-shadow(0 0 6px #00e5ff);
+}
+
+/* FLAGSEC brand */
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
+}
+
+/* Botón cerrar X */
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.85;
+
+  position: absolute;
+  top: 5px;      /* pegado al techo */
+  right: 5px;    /* pegado a la esquina derecha */
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* Lista de enlaces justo debajo del logo, semi pegado */
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #124150; /* color base oscuro */
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+  text-shadow: 0 0 6px #00e5ff; /* glow azul como el logo */
+}
+
+.navbar-links a:hover {
+  color: #00e5ff;  /* mantiene el efecto hover */
+  text-shadow: 0 0 8px #00e5ff; /* glow más intenso al pasar el mouse */
+}
+

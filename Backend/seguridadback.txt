@@ -1,0 +1,52 @@
+# BACKEND FLAGSEC - Puntos clave de seguridad
+
+DashboardController.php
+- Controla dashboards para student & admin.
+- Middleware auth:sanctum y role para proteger rutas.
+- Evita exposición de datos sensibles según rol.
+
+CursoController.php
+- CRUD de cursos protegido por role:admin.
+- Validaciones con CursoRequest (titulo único, imagen segura, user_id válido).
+- Métodos para inscripciones y progreso controlados.
+- Prevención de Mass Assignment y manipulación de datos.
+
+AuthMiddleware.php
+- Verifica token o sesión activa (sanctum).
+- Bloquea acceso a rutas protegidas sin login.
+- Seguridad contra bypass de sesión.
+
+RoleMiddleware.php
+- Controla permisos por rol (student/admin).
+- Permite acceso solo a rutas autorizadas.
+- Compatible con métodos hasRole() en User.php.
+
+LoginRequest.php
+- Validaciones estrictas: email y password requeridos y tipo correcto.
+- Previene inyecciones y inputs inválidos.
+- Mensajes de error seguros, no revelan info sensible.
+
+RegisterRequest.php
+- Validaciones completas: email único, password seguro, campos obligatorios.
+- Previene creación de usuarios con datos incorrectos.
+- Seguridad contra Mass Assignment.
+
+CursoRequest.php
+- Validaciones de creación/edición de curso:
+    - titulo único, max 255 caracteres.
+    - descripcion segura y limitada.
+    - imagen validada (tipo y tamaño).
+    - user_id debe existir.
+    - activo booleano.
+- Prevención de asignación masiva y datos corruptos.
+
+Otros puntos generales de seguridad:
+- Modelos (User, Curso, UserCurso) con $fillable y casting seguro.
+- Rutas API protegidas con auth:sanctum y role middleware.
+- CORS configurado solo para frontend confiable.
+- DB configurada con utf8mb4 y strict mode.
+- Sesiones y cache en database, preparadas para cifrado.
+- APP_DEBUG solo en desarrollo.
+- Passwords con bcrypt y rounds configurables.
+- Fallback en rutas API para evitar leaks.
+
